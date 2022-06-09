@@ -113,43 +113,48 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     public void onClick(View view) {
+        try{
+            switch (view.getId()){
 
-        switch (view.getId()){
-
-            case R.id.smallButton:
-                if(smallButton.isChecked()){
-                    slimness=0.9;
-                }
-                break;
-            case R.id.mediumButton:
-                if (mediumButton.isChecked()){
-                    slimness=1;
-                }
-                break;
-            case R.id.largeButton:
-                if (largeButton.isChecked()){
-                    slimness=1.1;
-                }
-                break;
-            case R.id.sumbitButton:
-                bmiResult.setText(calculateBmiResult());
-                idealWeightResult.setText((calculateIdealWeight(userHeightInput,slimness)) + " (" + setBmiStatusLabel(Double.parseDouble(calculateBmiResult())) + ")");
+                case R.id.smallButton:
+                    if(smallButton.isChecked()){
+                        slimness=0.9;
+                    }
+                    break;
+                case R.id.mediumButton:
+                    if (mediumButton.isChecked()){
+                        slimness=1;
+                    }
+                    break;
+                case R.id.largeButton:
+                    if (largeButton.isChecked()){
+                        slimness=1.1;
+                    }
+                    break;
+                case R.id.sumbitButton:
+                    bmiResult.setText(calculateBmiResult());
+                    idealWeightResult.setText((calculateIdealWeight(userHeightInput,slimness)) + " (" + setBmiStatusLabel(Double.parseDouble(calculateBmiResult())) + ")");
 
 
-            break;
-            case R.id.clearButton:
-                firstNameText.setText(null);
-                lastNameText.setText(null);
-                ageText.setText(null);
-                heightSlider.setProgress(0);
-                weightText.setText(null);
-                bmiResult.setText(null);
-                idealWeightResult.setText(null);
-                radioGroupBody.clearCheck();
-                radioGroupGender.clearCheck();
+                    break;
+                case R.id.clearButton:
+                    firstNameText.setText(null);
+                    lastNameText.setText(null);
+                    ageText.setText(null);
+                    heightSlider.setProgress(0);
+                    weightText.setText(null);
+                    bmiResult.setText(null);
+                    idealWeightResult.setText(null);
+                    radioGroupBody.clearCheck();
+                    radioGroupGender.clearCheck();
 
-                break;
+                    break;
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
         }
+
 
 
     }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BmiCalculator</string>
+    <string name="dragonimage">dragonImage</string>
 </resources>

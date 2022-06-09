@@ -25,10 +25,10 @@
         android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/firstNameText"
-        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintHorizontal_bias="0.193"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.131" />
+        app:layout_constraintVertical_bias="0.13" />
 
     <TextView
         android:id="@+id/lastNameTitle"
@@ -39,11 +39,11 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintEnd_toStartOf="@+id/lastNameText"
+        app:layout_constraintHorizontal_bias="0.193"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.203" />
+        app:layout_constraintVertical_bias="0.21" />
 
     <EditText
         android:id="@+id/firstNameText"
@@ -123,8 +123,9 @@
         android:indeterminate="false"
         android:indeterminateTint="#A57777"
         android:max="190"
+        android:min="140"
         android:nestedScrollingEnabled="true"
-        android:progress="0"
+        android:progress="140"
         android:progressTint="#4C0E8A"
         android:stepSize="10"
         android:thumbTint="#552A9E"
@@ -167,8 +168,8 @@
 
     <EditText
         android:id="@+id/ageText"
-        android:layout_width="73dp"
-        android:layout_height="49dp"
+        android:layout_width="71dp"
+        android:layout_height="44dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -196,7 +197,10 @@
         android:id="@+id/bmiResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="serif"
         android:text="- - - - - -"
+        android:textColor="#FAF7F7"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.291"
@@ -222,8 +226,12 @@
         android:id="@+id/idealWeightResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="serif"
         android:text="- - - - - -"
+        android:textAllCaps="false"
+        android:textColor="#FAF7F7"
         android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.111"
@@ -352,5 +360,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="121dp"
+        android:layout_height="153dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/dragonimage"
+        android:foreground="@drawable/dragon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.983"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.137"
+        tools:srcCompat="@drawable/dragon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
