@@ -4,48 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#937DB3"
     android:clipChildren="false"
     android:clipToPadding="false"
     android:drawingCacheQuality="high"
+    android:fitsSystemWindows="false"
+    android:nestedScrollingEnabled="true"
     tools:context=".MainActivity"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="-57dp">
 
     <TextView
-        android:id="@+id/Instructions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="please complete this form. Press the submit button when completed "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-
-    <TextView
         android:id="@+id/firstNameTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
         android:text="first name:"
+        android:textColor="#050505"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/firstNameText"
-        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.129" />
+        app:layout_constraintVertical_bias="0.131" />
 
     <TextView
         android:id="@+id/lastNameTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
         android:text="last name:"
+        android:textColor="#050505"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.23000002" />
+        app:layout_constraintVertical_bias="0.203" />
 
     <EditText
         android:id="@+id/firstNameText"
@@ -53,10 +51,13 @@
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="nam"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Instructions" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.112"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/lastNameText"
@@ -64,157 +65,105 @@
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="nam"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstNameText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.183" />
 
     <TextView
-        android:id="@+id/ageTextView"
+        android:id="@+id/ageTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="17dp"
         android:text="Age:"
+        android:textColor="#050505"
+        android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.325" />
+        app:layout_constraintVertical_bias="0.26999998" />
 
     <TextView
         android:id="@+id/genderTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Gender:"
+        android:textColor="#050505"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintHorizontal_bias="0.563"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.429" />
-
-    <RadioButton
-        android:id="@+id/maleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="male"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.301"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428" />
-
-    <RadioButton
-        android:id="@+id/femaleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        android:text="female"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.586"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.428" />
-
-    <TextView
-        android:id="@+id/BodyStructureTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Body Structure:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioButton
-        android:id="@+id/smallButton"
-        android:layout_width="87dp"
-        android:layout_height="48dp"
-        android:checked="true"
-        android:text="small"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
-
-    <RadioButton
-        android:id="@+id/MediumButton"
-        android:layout_width="92dp"
-        android:layout_height="48dp"
-        android:text="Medium"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.658"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
-
-    <RadioButton
-        android:id="@+id/largeButton"
-        android:layout_width="85dp"
-        android:layout_height="48dp"
-        android:text="Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.37" />
 
     <TextView
         android:id="@+id/heightTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Height:"
+        android:textColor="#050505"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.019"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.587" />
+        app:layout_constraintVertical_bias="0.68" />
 
     <SeekBar
         android:id="@+id/heightSlider"
-        android:layout_width="293dp"
-        android:layout_height="28dp"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="275dp"
+        android:layout_height="30dp"
+        android:fitsSystemWindows="true"
+        android:indeterminate="false"
+        android:indeterminateTint="#A57777"
+        android:max="190"
+        android:nestedScrollingEnabled="true"
+        android:progress="0"
+        android:progressTint="#4C0E8A"
+        android:stepSize="10"
+        android:thumbTint="#552A9E"
+        android:valueFrom="140"
+        android:valueTo="190"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintHorizontal_bias="0.816"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.594" />
+        app:layout_constraintVertical_bias="0.68"
+        app:tickMarkTintMode="add" />
 
     <TextView
         android:id="@+id/weightTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="your weight is:"
+        android:textColor="#050505"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.669" />
+        app:layout_constraintVertical_bias="0.752" />
 
     <EditText
         android:id="@+id/weightText"
-        android:layout_width="91dp"
+        android:layout_width="127dp"
         android:layout_height="48dp"
         android:ems="10"
         android:inputType="number"
-        android:text="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.37"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.671" />
+        app:layout_constraintVertical_bias="0.756" />
 
     <EditText
         android:id="@+id/ageText"
@@ -222,61 +171,65 @@
         android:layout_height="49dp"
         android:ems="10"
         android:inputType="number"
-        android:text="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintHorizontal_bias="0.192"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.309" />
+        app:layout_constraintVertical_bias="0.253" />
 
     <TextView
-        android:id="@+id/BmiTitle"
+        android:id="@+id/bmiTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="your bmi is:"
+        android:textColor="#050505"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.035"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.726" />
+        app:layout_constraintVertical_bias="0.803" />
 
     <TextView
         android:id="@+id/bmiResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="------"
+        android:text="- - - - - -"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.291"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.726" />
+        app:layout_constraintVertical_bias="0.803" />
 
     <TextView
         android:id="@+id/idealWeightTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="your ideal Weight is:"
+        android:textColor="#050505"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintHorizontal_bias="0.042"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.779" />
+        app:layout_constraintVertical_bias="0.849" />
 
     <TextView
         android:id="@+id/idealWeightResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="------"
+        android:text="- - - - - -"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toEndOf="@+id/idealWeightTitle"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.779" />
+        app:layout_constraintVertical_bias="0.849" />
 
     <Button
         android:id="@+id/sumbitButton"
@@ -300,5 +253,104 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.964" />
+
+    <RadioGroup
+        android:id="@+id/buttonGropBody"
+        android:layout_width="101dp"
+        android:layout_height="155dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.524">
+
+        <RadioButton
+            android:id="@+id/smallButton"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:text="small" />
+
+        <RadioButton
+            android:id="@+id/mediumButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Medium"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/largeButton"
+            android:layout_width="85dp"
+            android:layout_height="48dp"
+            android:text="Large"
+            android:textSize="20sp" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/buttonGroupGender"
+        android:layout_width="98dp"
+        android:layout_height="90dp"
+        android:animateLayoutChanges="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469">
+
+        <RadioButton
+            android:id="@+id/maleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="male" />
+
+        <RadioButton
+            android:id="@+id/femaleButton"
+            android:layout_width="88dp"
+            android:layout_height="48dp"
+            android:minHeight="48dp"
+            android:scrollbarAlwaysDrawHorizontalTrack="false"
+            android:scrollHorizontally="false"
+            android:text="female"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="447dp" />
+
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="-3dp" />
+
+    <TextView
+        android:id="@+id/bodyStructureTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Body Structure:"
+        android:textColor="#050505"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35000002" />
+
+    <TextView
+        android:id="@+id/Instructions"
+        android:layout_width="291dp"
+        android:layout_height="62dp"
+        android:text="please complete this form.                             Press the submit button when completed "
+        android:textColor="#E8F1F1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
